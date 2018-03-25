@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btndelete"
+            android:layout_marginEnd="31dp"
+            android:layout_marginRight="31dp"
+            android:layout_toLeftOf="@+id/btndelete"
+            android:layout_toStartOf="@+id/btndelete"
+            android:onClick="openEditActivity"
+            app:srcCompat="@drawable/ic_edit"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/detailname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="30dp"
+            android:text="TextView" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btndelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            app:srcCompat="@android:drawable/ic_menu_delete"  />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/detailno1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginBottom="15dp"
+        android:text="TextView" />
+    <TextView
+        android:id="@+id/detailno2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginBottom="15dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/detailemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/detailaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:text="TextView" />
+
+</LinearLayout>

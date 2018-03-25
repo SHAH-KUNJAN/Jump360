@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "64815239089",
+    "firebase_url": "https://contactsjump360.firebaseio.com",
+    "project_id": "contactsjump360",
+    "storage_bucket": "contactsjump360.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64815239089:android:f82d33cb0f332f33",
+        "android_client_info": {
+          "package_name": "com.example.abc.contactsjump360"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64815239089-t5hshbkv7fsm7fqpa1a1ofrgecp4ea0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.abc.contactsjump360",
+            "certificate_hash": "40c82bbf9b28acfede9c857763db56095a386f16"
+          }
+        },
+        {
+          "client_id": "64815239089-29agtofc9khg6rmh2t64r9gav9fo6v76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClpaOBqaD1aev-B6LvuaLmnajd6t0yM2s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64815239089-29agtofc9khg6rmh2t64r9gav9fo6v76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
