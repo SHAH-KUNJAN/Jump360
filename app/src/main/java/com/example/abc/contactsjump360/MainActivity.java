@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseReference myData ;
     LinearLayout l1;
-
+FirebaseUser user;
    ListView listViewcontact;
    List<Contactlist> condisp;
    List<String> conkeys;
+    FirebaseAuth mAuth;
+
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        myData= FirebaseDatabase.getInstance().getReference("KUNJAN");
+        mAuth = FirebaseAuth.getInstance();
+        user =  mAuth.getCurrentUser();
+        myData= FirebaseDatabase.getInstance().getReference(user.getUid());
 
         listViewcontact=(ListView) findViewById(R.id.listViewcontact);
         l1=(LinearLayout) findViewById(R.id.lay1);

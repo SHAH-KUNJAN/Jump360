@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,6 +25,9 @@ public class AddContact extends AppCompatActivity {
     private Contactlist contact;
     private boolean isEditing;
     private String key;
+FirebaseAuth mAuth;
+FirebaseUser user;
+
 
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +58,11 @@ public class AddContact extends AppCompatActivity {
             key = getIntent().getStringExtra("key");
         }
 
-        myData= database.getReference("KUNJAN");
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+
+
+        myData= database.getReference(user.getUid());
 
 
 		btnAdd.setOnClickListener(new OnClickListener() {

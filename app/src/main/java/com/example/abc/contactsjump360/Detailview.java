@@ -64,8 +64,11 @@ public class Detailview extends AppCompatActivity {
 
     private void deleteRecord()
     {
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
         key = getIntent().getStringExtra("key");
-        DatabaseReference deleterecord= FirebaseDatabase.getInstance().getReference("KUNJAN").child(key);
+        DatabaseReference deleterecord= FirebaseDatabase.getInstance().getReference(user.getUid()).child(key);
         deleterecord.removeValue();
         Toast.makeText(this,"your record id Delete",Toast.LENGTH_SHORT).show();
         finish();
